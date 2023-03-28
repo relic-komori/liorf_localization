@@ -18,8 +18,6 @@
 #include <visualization_msgs/Marker.h>
 #include <visualization_msgs/MarkerArray.h>
 
-#include <opencv/cv.h>
-
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl/search/impl/search.hpp>
@@ -56,6 +54,10 @@
 #include <array>
 #include <thread>
 #include <mutex>
+
+#include <opencv2/opencv.hpp>
+// OpenCVのインクルードを修正
+// エラー回避のため最後に読み込み（参考: https://stackoverflow.com/questions/42504592/flann-util-serialization-h-class-stdunordered-mapunsigned-int-stdvectorun ）
 
 using namespace std;
 
